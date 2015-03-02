@@ -27,8 +27,13 @@ input
 	text-align: center;
 	width: 300px;
 	margin: auto;
-}    
+	height: 500px
+} 
 
+#formulaire .form-control{
+	width:50%;
+}
+   
 footer
 {
 	position:fixed;
