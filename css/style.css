@@ -33,6 +33,10 @@ input
 #formulaire .form-control{
 	width:50%;
 }
+
+.lineForm{
+	height:40px;
+}
    
 footer
 {
