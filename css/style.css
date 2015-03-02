@@ -1,0 +1,52 @@
+@CHARSET "ISO-8859-1";
+#titre
+{
+	color: red;
+	text-align: center;
+}
+
+p
+{
+	text-align: center;
+	padding-top: 2cm;
+}
+
+label
+{
+	display: block;
+	float: left;
+}
+
+input
+{
+	float: right;
+}
+
+#formulaire
+{
+	text-align: center;
+	width: 300px;
+	margin: auto;
+}    
+
+footer
+{
+	position:fixed;
+	bottom:0;
+	left:0;
+	height:100px;
+}
+
+#plan
+{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+}
+
+#mentions
+{
+	position:fixed;
+	bottom:10px;
+	left:10px;
+}

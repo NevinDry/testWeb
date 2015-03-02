@@ -3,27 +3,32 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/bootstrap-theme.css"/>
 		<title>Bonjour</title>
-		<h1>Bonjour</h1>
+		<h1 id="titre">Bonjour</h1>
 	</head>
 	
 	<body>
-		<form method="post" action="traitement.php">
-			<p>
-				<label>Adresse e-mail:</label> <input type="email" name="adresse mail">
+		<div id="formulaire">
+			<form method="post" action="traitement.php">
+				<label>Adresse e-mail:</label> <input class="form-control" type="email" id="email" name="adresse mail">
 				</br>
-				<labael>Pseudo:</labael> <input name="pseudo">
+				<label>Pseudo:</label> <input type="text" id="pseudo" name="pseudo">
 				</br>
-				<labael>Adresse:</labael> <input name="adresse">
+				<label>Adresse:</label> <input type="text" id="adresse" name="adresse">
 				</br>
-				<labael>Mot de passe:</labael> <input type="password" name="mot de passe">
-			</p>
-		</form>
+				<label>Mot de passe:</label> <input type="password" id="password" name="mot de passe">
+				</br>
+				<input type="submit" class="btn" name="valider" value="valider">
+			</form>
+		</div>
 	</body>
 
 	<footer>
-		<a href="http://google.fr">mentions légales</a>
-		<a href="http://google.fr">plan du site</a>
+		<a id="mentions" href="http://google.fr">mentions légales</a>
+		<a id="plan" href="http://google.fr">plan du site</a>
 	</footer>
 </html>
