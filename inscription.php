@@ -36,7 +36,7 @@ else{
 
 // On vérifie si les champs sont vides
 if(empty($adressemail) OR empty($pseudo) OR empty($adresse) OR empty($motdepasse)){
-    echo '<font color="red">Attention, seul champ vide !</font>';
+    echo '<font color="red">Attention, champ vide !</font>';
 }
 
 // Aucun champ n'est vide, on peut enregistrer dans la table
@@ -54,6 +54,8 @@ else{
     // on affiche le résultat pour le visiteur
     echo 'Vos infos ont été ajoutées.';
 
-    mysqli_close($db);  // on ferme la connexion
-} 
+mysqli_close($db);  // on ferme la connexion
+    
+    
+}
 ?> 
