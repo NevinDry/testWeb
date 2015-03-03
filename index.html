@@ -40,25 +40,27 @@ function verifpassword2(champ)
 </script>
 	<body>
 		<div id="formulaire">
-			<form method="post" action="traitement.php">
-				<h3>Inscription</h3>
-				<div class="lineForm"><label>Adresse e-mail:</label> <input class="form-control" type="email" id="email" name="email"></div>
-				<div class="lineForm"><label>Pseudo:</label> <input  class="form-control" type="text" id="pseudo" name="pseudo"></div>
-				<div class="lineForm"><label>Adresse:</label> <input  class="form-control" type="text" id="adresse" name="adresse"></div>
-				<div class="lineForm"><label>Mot de passe:</label> <input  class="form-control" type="password" id="password" name="password"></div>
-				<div class="lineForm"><label>Confirmer:</label> <input class="form-control" type="password" id="password2" name="password2" onblur="verifpassword2(this)"></div>
-				<div class="lineForm"><input type="submit" class="btn" id="boutonValideInscription" name="valider" value="valider"></div>
-			</form>
-		</div>
+			<div id="inscription">
+				<form method="post" action="traitement.php">
+					<h3>Inscription</h3>
+					<div class="lineForm"><label>Adresse e-mail:</label> <input class="form-control" type="email" id="email" name="email"></div>
+					<div class="lineForm"><label>Pseudo:</label> <input  class="form-control" type="text" id="pseudo" name="pseudo"></div>
+					<div class="lineForm"><label>Adresse:</label> <input  class="form-control" type="text" id="adresse" name="adresse"></div>
+					<div class="lineForm"><label>Mot de passe:</label> <input  class="form-control" type="password" id="password" name="password"></div>
+					<div class="lineForm"><label>Confirmer:</label> <input class="form-control" type="password" id="password2" name="password2" onblur="verifpassword2(this)"></div>
+					<div class="lineForm"><input type="submit" class="btn" id="boutonValideInscription" name="valider" value="valider"></div>
+				</form>
+			</div>
 		
-		<div id="connection">
-			<form method="post" action="traitement.php">
-				<h3>connection</h3>
-				<div class="lineForm"><label>Pseudo:</label> <input  class="form-control" type="text" id="pseudo" name="pseudo"></div>
-				<div class="lineForm"><label>Mot de passe:</label> <input  class="form-control" type="password" id="password" name="password"></div>
-				<div class="lineForm"><input type="submit" class="btn" id="boutonValideConnection" name="valider" value="valider"></div>
-			</form>
-		</div>
+			<div id="connection">
+				<form method="post" action="traitement.php">
+					<h3>connection</h3>
+					<div class="lineForm"><label>Pseudo:</label> <input  class="form-control" type="text" id="pseudo" name="pseudo"></div>
+					<div class="lineForm"><label>Mot de passe:</label> <input  class="form-control" type="password" id="password" name="password"></div>
+					<div class="lineForm"><input type="submit" class="btn" id="boutonValideConnection" name="valider" value="valider"></div>
+				</form>
+			</div>
+		</div>	
 	</body>
 
 	<footer>

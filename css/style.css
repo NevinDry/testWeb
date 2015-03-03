@@ -20,19 +20,20 @@ input{
 
 #formulaire{
 	text-align: center;
-	width: 300px;
 	margin: auto;
-	height: 500px;
-	float: left;
+	width: 627px;
+	margin-top: 40px;
 } 
 
-#connection{
-	text-align: center;
-	width: 300px;
-	margin: auto;
-	height: 500px;
+#inscription{
 	float: left;
-	
+	padding-right: 30px;
+	border-right: 2px solid;
+}
+
+#connection{
+	float: left;
+	margin-left: 30px; 
 }
 
 #formulaire .form-control{
