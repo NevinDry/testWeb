@@ -1,36 +1,45 @@
 @CHARSET "ISO-8859-1";
-#titre
-{
+#titre{
 	color: red;
 	text-align: center;
 }
 
-p
-{
+p{
 	text-align: center;
 	padding-top: 2cm;
 }
 
-label
-{
+label{
 	display: block;
 	float: left;
 }
 
-input
-{
+input{
 	float: right;
 }
 
-#formulaire
-{
+#formulaire{
 	text-align: center;
 	width: 300px;
 	margin: auto;
-	height: 500px
+	height: 500px;
+	float: left;
 } 
 
+#connection{
+	text-align: center;
+	width: 300px;
+	margin: auto;
+	height: 500px;
+	float: left;
+	
+}
+
 #formulaire .form-control{
+	width:50%;
+}
+
+#connection .form-control{
 	width:50%;
 }
 
