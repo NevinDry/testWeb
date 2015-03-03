@@ -20,13 +20,14 @@ if(isset($_POST) && !empty($_POST['pseudoConnection']) && !empty($_POST['passwor
 	extract($_POST);
 	
 // on recupère le password de la table qui correspond au login du visiteur
+// requête qui récupère mdp, mail et adresse de la base de données à partir du pseudo de connection
 
-	$sql = "select user_password from user where user_pseudo='".$pseudoConnection."'";
-	$req = mysqli_query($db, $sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+	$sqlRequestForConnect = "select user_password, user_mail, user_adresse from user where user_pseudo='".$pseudoConnection."'";
+	$req = mysqli_query($db, $sqlRequestForConnect) or die('Erreur SQL !<br>'.$sqlRequestForConnect.'<br>'.mysql_error());
 
-	$data = mysqli_fetch_assoc($req);
+	$dataResultRequete = mysqli_fetch_assoc($req);
 
-if($data['user_password'] != md5($passwordConnection)){
+if($dataResultRequete['user_password'] != md5($passwordConnection)){
 		echo '<p>Mauvais login / password. Merci de recommencer</p>';
 		include('index.html'); // On inclut le formulaire d'identification
 		exit;
@@ -35,8 +36,10 @@ if($data['user_password'] != md5($passwordConnection)){
 else{
 	session_start();
 	$_SESSION['pseudoConnection'] = $pseudoConnection;
-	echo 'Vous etes bien logué';
+	$_SESSION['user_mail'] = $dataResultRequete['user_mail'];
+	$_SESSION['user_adresse'] = $dataResultRequete['user_adresse'];
 }	
+
 		
 // ici vous pouvez afficher un lien pour renvoyer
 // vers la page d'accueil de votre espace membres
