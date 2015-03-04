@@ -23,7 +23,15 @@
 			</br>
 			<div><label class="parcourir">Image du produit:</label> <input type="file" accept="image/*" name="imageProduit" class="parcourir"></div>
 			</br>
-			<div class="lineForm"><input type="submit" class="btn" id="boutonAjouterCodeBarre" name="valider" value="Ajouter"></div>		
+			<div class="lineForm"><input type="submit" class="btn" id="boutonAjouterCodeBarre" name="valider" value="Ajouter"></div>
+			</br>
+			<div id="selectionTypeCodeBarre">
+			<label for="typeCodeBarre">Type de code barre:</label>
+			<select name="type" id="type">
+				<option value="1D">1D</option>
+				<option value="2D">2D</option>
+			</select>
+			</div>		
 		</form>	
 	</body>
 </html>

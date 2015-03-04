@@ -1,6 +1,7 @@
  <?php
 // On commence par récupérer les champs
 
+
  // connexion à la base
  $db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
  
@@ -52,10 +53,15 @@ else{
     $db->query($sql) or die('Erreur SQL !'.$sql.'<br>'.mysql_error());
 
     // on affiche le résultat pour le visiteur
-    echo 'Vos infos ont été ajoutées.';
+    header( 'content-type: text/html; charset=utf-8' );
+    echo 'Inscription réussi, veuillez vous connecter';
+    include 'index.php';
+    
+    
+    
 
 mysqli_close($db);  // on ferme la connexion
-    
+exit;
     
 }
 ?> 

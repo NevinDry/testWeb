@@ -22,7 +22,7 @@ if(isset($_POST) && !empty($_POST['pseudoConnexion']) && !empty($_POST['password
 // on recupère le password de la table qui correspond au login du visiteur
 // requête qui récupère mdp, mail et adresse de la base de données à partir du pseudo de connexion
 
-	$sqlRequestForConnect = "select user_password, user_mail, user_adresse from user where user_pseudo='".$pseudoConnexion."'";
+	$sqlRequestForConnect = "select user_id, user_password, user_mail, user_adresse from user where user_pseudo='".$pseudoConnexion."'";
 	$req = mysqli_query($db, $sqlRequestForConnect) or die('Erreur SQL !<br>'.$sqlRequestForConnect.'<br>'.mysql_error());
 
 	$dataResultRequete = mysqli_fetch_assoc($req);
@@ -35,6 +35,8 @@ if($dataResultRequete['user_password'] != md5($passwordConnexion)){
 
 else{
 	session_start();
+	
+	$_SESSION['user_id']= $dataResultRequete['user_id'];
 	$_SESSION['pseudoConnexion'] = $pseudoConnexion;
 	$_SESSION['user_mail'] = $dataResultRequete['user_mail'];
 	$_SESSION['user_adresse'] = $dataResultRequete['user_adresse'];
