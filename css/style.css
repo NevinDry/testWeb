@@ -1,4 +1,7 @@
 @CHARSET "ISO-8859-1";
+
+/******************index.php***************************/
+
 #titre{
 	color: red;
 	text-align: center;
@@ -31,7 +34,7 @@ input{
 	border-right: 2px solid;
 }
 
-#connection{
+#connexion{
 	float: left;
 	margin-left: 30px; 
 }
@@ -40,7 +43,7 @@ input{
 	width:50%;
 }
 
-#connection .form-control{
+#connexion .form-control{
 	width:50%;
 }
 
@@ -68,4 +71,30 @@ footer
 	position:fixed;
 	bottom:10px;
 	left:10px;
+}
+
+/******************session.php***************************/
+
+h1
+{
+	text-align:center;
+}
+
+h4
+{
+	margin-left:60px;
+	padding-top:30px;
+}
+
+#informationSession
+{
+	margin-left:30px;
+	padding-top: 20px;
+}
+
+#boutonDeconnexion
+{
+	position: absolute;
+	top: 1em;
+	right: 1em;
 }

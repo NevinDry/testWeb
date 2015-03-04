@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<?php
+	session_start();
+	if (isset($_SESSION['pseudoConnexion'])){
+		header('location: session.php');
+	}else{ 	
+	?>
+	
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -52,12 +59,12 @@ function verifpassword2(champ)
 				</form>
 			</div>
 		
-			<div id="connection">
-				<form method="post" action="connection.php">
-					<h3>connection</h3>
-					<div class="lineForm"><label>Pseudo:</label> <input  class="form-control" type="text" id="pseudoConnection" name="pseudoConnection"></div>
-					<div class="lineForm"><label>Mot de passe:</label> <input  class="form-control" type="password" id="passwordConnection" name="passwordConnection"></div>
-					<div class="lineForm"><input type="submit" class="btn" id="boutonValideConnection" name="valider" value="valider"></div>
+			<div id="connexion">
+				<form method="post" action="connexion.php">
+					<h3>connexion</h3>
+					<div class="lineForm"><label>Pseudo:</label> <input  class="form-control" type="text" id="pseudoConnexion" name="pseudoConnexion"></div>
+					<div class="lineForm"><label>Mot de passe:</label> <input  class="form-control" type="password" id="passwordConnexion" name="passwordConnexion"></div>
+					<div class="lineForm"><input type="submit" class="btn" id="boutonValideConnexion" name="valider" value="valider"></div>
 				</form>
 			</div>
 		</div>	
@@ -68,3 +75,5 @@ function verifpassword2(champ)
 		<a id="plan" href="http://google.fr">plan du site</a>
 	</footer>
 </html>
+<?php }
+?>
