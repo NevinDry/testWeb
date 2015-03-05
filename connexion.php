@@ -19,8 +19,8 @@ else{
 if(isset($_POST) && !empty($_POST['pseudoConnexion']) && !empty($_POST['passwordConnexion'])){
 	extract($_POST);
 	
-// on recupère le password de la table qui correspond au login du visiteur
-// requête qui récupère mdp, mail et adresse de la base de données à partir du pseudo de connexion
+// on recupÃ©re le password de la table qui correspond au login du visiteur
+// requÃ©te qui rÃ©cupÃ©re mdp, mail et adresse de la base de donnÃ©es Ã© partir du pseudo de connexion
 
 	$sqlRequestForConnect = "select user_id, user_password, user_mail, user_adresse from user where user_pseudo='".$pseudoConnexion."'";
 	$req = mysqli_query($db, $sqlRequestForConnect) or die('Erreur SQL !<br>'.$sqlRequestForConnect.'<br>'.mysql_error());
@@ -49,7 +49,7 @@ else{
 	
 }
 else{
-	echo '<p>Vous avez oublié de remplir un champ.</p>';
+	echo '<p>Vous avez oubliÃ© de remplir un champ.</p>';
 	include('index.php'); // On inclut le formulaire d'identification
 	exit;
 }

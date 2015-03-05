@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/bootstrap.css"/>
@@ -8,10 +9,10 @@
 	</head>
 	
 	<body>
-		<form method="post" class="formulaireAjoutCodeBarre" action="ajoutCodeBarre.php">
+		<form method="post" class="formulaireAjoutCodeBarre" action="ajoutCodeBarre.php" enctype="multipart/form-data">
 			<div class="lineForm"><label>Nom:</label> <input class="form-control" type="text" id="nom" name="nom"></div>
 			</br>
-			<div class="lineForm"><label>Référence:</label> <input class="form-control" type="text" id="reference" name="reference"></div>
+			<div class="lineForm"><label>RÃ©fÃ©rence:</label> <input class="form-control" type="text" id="reference" name="reference"></div>
 			</br>
 			<div>
 			<label>Description:</label> 

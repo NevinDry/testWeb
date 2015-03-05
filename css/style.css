@@ -110,6 +110,12 @@ h4
 	margin-top:40px;
 }
 
+#tableau
+{
+	float:right;
+	margin-top:-227px;
+}
+
 /**********************************codebarre.php************************************/
 
 .formulaireAjoutCodeBarre

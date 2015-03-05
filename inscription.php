@@ -1,8 +1,8 @@
  <?php
-// On commence par récupérer les champs
+// On commence par rÃ©cupÃ©rer les champs
 
 
- // connexion à la base
+ // connexion Ã© la base
  $db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
  
  
@@ -35,7 +35,7 @@ else{
 }
 
 
-// On vérifie si les champs sont vides
+// On vÃ©rifie si les champs sont vides
 if(empty($adressemail) OR empty($pseudo) OR empty($adresse) OR empty($motdepasse)){
     echo '<font color="red">Attention, champ vide !</font>';
 }
@@ -43,18 +43,18 @@ if(empty($adressemail) OR empty($pseudo) OR empty($adresse) OR empty($motdepasse
 // Aucun champ n'est vide, on peut enregistrer dans la table
 else{
 	
-	// sélection de la base  
+	// sÃ©lection de la base  
 
     
-    // on écrit la requête sql
+    // on Ã©crit la requÃ©te sql
     $sql = 'INSERT INTO user(user_mail, user_pseudo, user_adresse, user_password) VALUES("'.$adressemail.'","'.$pseudo.'","'.$adresse.'","'.md5($motdepasse).'")';
     
-    // on insère les informations du formulaire dans la table
+    // on insÃ©re les informations du formulaire dans la table
     $db->query($sql) or die('Erreur SQL !'.$sql.'<br>'.mysql_error());
 
-    // on affiche le résultat pour le visiteur
+    // on affiche le rÃ©sultat pour le visiteur
     header( 'content-type: text/html; charset=utf-8' );
-    echo 'Inscription réussi, veuillez vous connecter';
+    echo 'Inscription rÃ©ussi, veuillez vous connecter';
     include 'index.php';
     
     
