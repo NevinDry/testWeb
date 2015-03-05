@@ -59,7 +59,7 @@ if(empty($nom) OR empty($reference) OR empty($imageCodeBarre) OR empty($imagePro
 else{
 	
 	// on écrit la requéte sql
-	$sql = 'INSERT INTO codebarre(codebarre_nom, codebarre_ref, codebarre_description, codebarre_image, codebarre_image_produit, codebarre_type, codebarre_user_id) VALUES("'.$nom.'","'.$reference.'","'.$description.'","'.$imageProduit.'","'.$imageCodeBarre.'","'.$type.'","'.$_SESSION['user_id'].'")';
+	$sql = 'INSERT INTO codebarre(codebarre_nom, codebarre_ref, codebarre_description, codebarre_image, codebarre_image_produit, codebarre_type, codebarre_user_id) VALUES("'.$nom.'","'.$reference.'","'.$description.'","'.$imageCodeBarre.'","'.$imageProduit.'","'.$type.'","'.$_SESSION['user_id'].'")';
 	
 	// on insére les informations du formulaire dans la table
 	$db->query($sql) or die('Erreur SQL !'.$sql.'<br>'.mysql_error());

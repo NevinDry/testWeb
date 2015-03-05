@@ -45,9 +45,10 @@
     				<th>Nom</th>
     				<th>Référence</th>
     				<th>Description</th>
-    				<th>Image du produit</th>
     				<th>Image du code barre</th>
+    				<th>Image du produit</th>
     				<th>Type</th>
+    				<th>Supprimer</th>
   				</tr>
   					<?php 
   					
@@ -55,21 +56,29 @@
   					
   					
   					
-  					$sqlRequestInfoCodeBarre = "select codebarre_nom, codebarre_ref, codebarre_description, codebarre_image, codebarre_image_produit, codebarre_type from codebarre where codebarre_user_id='".$_SESSION['user_id']."'";
+  					$sqlRequestInfoCodeBarre = "select codebarre_id, codebarre_nom, codebarre_ref, codebarre_description, codebarre_image, codebarre_image_produit, codebarre_type from codebarre where codebarre_user_id='".$_SESSION['user_id']."'";
   					$req = mysqli_query($db, $sqlRequestInfoCodeBarre) or die('Erreur SQL !<br>'.$sqlRequestInfoCodeBarre.'<br>'.mysql_error());
   					while ($dataResultRequete = mysqli_fetch_assoc($req)){
-  					echo ($dataResultRequete['codebarre_nom'].'</br>');
-  					echo ($dataResultRequete['codebarre_ref'].'</br>');
-  					echo ($dataResultRequete['codebarre_description'].'</br>');
-  					echo ($dataResultRequete['codebarre_image'].'</br>');
-  					echo ($dataResultRequete['codebarre_image_produit'].'</br>');
-  					echo ($dataResultRequete['codebarre_type'].'</br>');
+  					
+  						
+  					echo ("<tr>
+  					<td>".$dataResultRequete['codebarre_nom']."</td>
+  					<td>".$dataResultRequete['codebarre_ref']."</td>
+  					<td>".substr($dataResultRequete['codebarre_description'], 0, 50)."...</td>
+  					<td><img class='imageTableau' src=images/imageCodeBarre/".$dataResultRequete['codebarre_image']."></td>
+  					<td><img class='imageTableau' src=images/imageProduit/".$dataResultRequete['codebarre_image_produit']."></td>
+  					<td>".$dataResultRequete['codebarre_type']."</td>
+  					<td>
+  						<div class='lineForm'>
+  							<a href='supprimerCodeBarre.php?str=".$dataResultRequete['codebarre_id']."'>
+  								<input type='submit' class='btn' id='boutonSupprimerCodeBarre' name='Supprimer' value='Supprimer'>
+  							</a>
+  						</div>
+  					</tr>");
   					}
   						
   					?>
-  				<tr>
-  					
-  				</tr>
+  				
   			</table>	
 		</body>
 		
