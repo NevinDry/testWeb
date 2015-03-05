@@ -49,6 +49,7 @@
     				<th>Image du produit</th>
     				<th>Type</th>
     				<th>Supprimer</th>
+    				<th>Afficher les détails</th>
   				</tr>
   					<?php 
   					
@@ -62,19 +63,27 @@
   					
   						
   					echo ("<tr>
-  					<td>".$dataResultRequete['codebarre_nom']."</td>
-  					<td>".$dataResultRequete['codebarre_ref']."</td>
-  					<td>".substr($dataResultRequete['codebarre_description'], 0, 50)."...</td>
-  					<td><img class='imageTableau' src=images/imageCodeBarre/".$dataResultRequete['codebarre_image']."></td>
-  					<td><img class='imageTableau' src=images/imageProduit/".$dataResultRequete['codebarre_image_produit']."></td>
-  					<td>".$dataResultRequete['codebarre_type']."</td>
-  					<td>
-  						<div class='lineForm'>
-  							<a href='supprimerCodeBarre.php?str=".$dataResultRequete['codebarre_id']."'>
-  								<input type='submit' class='btn' id='boutonSupprimerCodeBarre' name='Supprimer' value='Supprimer'>
-  							</a>
-  						</div>
-  					</tr>");
+		  					<td>".$dataResultRequete['codebarre_nom']."</td>
+		  					<td>".$dataResultRequete['codebarre_ref']."</td>
+		  					<td>".substr($dataResultRequete['codebarre_description'], 0, 50)."...</td>
+		  					<td><img class='imageTableau' src=images/imageCodeBarre/".$dataResultRequete['codebarre_image']."></td>
+		  					<td><img class='imageTableau' src=images/imageProduit/".$dataResultRequete['codebarre_image_produit']."></td>
+		  					<td>".$dataResultRequete['codebarre_type']."</td>
+	  						<td>
+		  						<div class='lineForm'>
+		  							<a href='supprimerCodeBarre.php?str=".$dataResultRequete['codebarre_id']."'>
+		  								<input type='submit' class='btn' id='boutonSupprimerCodeBarre' name='Supprimer' value='Supprimer'>
+		  							</a>
+		  						</div>
+  							</td>
+  							<td>
+  								<div class='lineForm'>
+		  							<a href='afficherDetail.php?str=".$dataResultRequete['codebarre_id']."'>
+		  								<input type='submit' class='btn' id='boutonDetailCodeBarre' name='Details' value='Details'>
+		  							</a>
+		  						</div>
+  							</td>		
+  						</tr>");
   					}
   						
   					?>
