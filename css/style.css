@@ -122,6 +122,13 @@ h4
 	width:50px;
 }
 
+#boutonGestion
+{
+	position:absolute;
+	top:15px;
+	right:140px
+}
+
 /**********************************codebarre.php************************************/
 
 .formulaireAjoutCodeBarre
@@ -149,3 +156,48 @@ h4
 }
 
 /*****************************afficherDetail.php***************************************/
+
+
+.boutonRetourSession
+{
+	position:absolute;
+	top:10px;
+	right:10px
+}
+
+.titreAfficherDetail
+{
+	font-family: "Times New Roman", Georgia, Serif;
+}
+
+.imageDetail
+{
+	max-height:280px;
+	max-widht:300px;
+    margin-left:220px;
+    margin-top:40px;
+}
+
+.referenceTypeDetail
+{
+	float:right;
+	margin-top:265px;
+	font-size: 20px;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+
+.descriptionDetail
+{
+	font-size:16px;
+	font-family: "Times New Roman", Georgia, Serif;
+	width:80%;
+	margin:auto;
+}
+
+.titreDescription
+{
+	font-size:24px;
+	margin-top:80px;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+

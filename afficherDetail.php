@@ -14,10 +14,19 @@ if(isset($_GET["str"]))
 		<link rel='stylesheet' href='css/bootstrap.min.css'/>
 		<link rel='stylesheet' href='css/bootstrap.css'/>
 		<link rel='stylesheet' href='css/bootstrap-theme.css'/>	
-		<h1>".$dataResultRequete['codebarre_nom']."</h1>
-			
-		<div>Référence:".$dataResultRequete['codebarre_ref']."</div>
-		<div>Description:".$dataResultRequete['codebarre_description']."</div>
+		<h1 class='titreAfficherDetail'>".$dataResultRequete['codebarre_nom']."</h1>
+		<a class='boutonRetourSession' href='session.php'>
+		  	<input type='submit' class='btn' id='boutonRetourSession' name='Retour' value='Retour'>
+		</a>	
+		<div 
+			class='referenceTypeDetail'>Référence:".$dataResultRequete['codebarre_ref']."
+			</br>
+			Type de code barre:".$dataResultRequete['codebarre_type']."
+		</div>		
+		<img class='imageDetail' src=images/imageCodeBarre/".$dataResultRequete['codebarre_image'].">
+		<img class='imageDetail' src=images/imageProduit/".$dataResultRequete['codebarre_image_produit'].">
+		<div class='descriptionDetail'><h5 class='titreDescription'>Description:</h5>".$dataResultRequete['codebarre_description']."</div>
+		
 			
 			
 			");

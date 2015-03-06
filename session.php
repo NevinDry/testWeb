@@ -39,6 +39,15 @@
 			<form action="deconnexion.php" method="post">	
 				<div class="lineForm"><input type="submit" class="btn" id="boutonDeconnexion" name="deconnexion" value="Déconnexion"></div>
 			</form>
+			<?php 
+			if ($_SESSION['user_type']=='admin'){
+			?>	
+				<a href='admin/gestion.php'>
+		  			<input type='submit' class='btn' id='boutonGestion' name='EspaceAdmin' value='EspaceAdmin'>
+		  		</a>
+			<?php
+			}
+			?>
 			
 			<table id="tableau" style="width:80%" class="table table-hover">
   				<tr>
