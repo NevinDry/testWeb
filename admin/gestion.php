@@ -19,15 +19,17 @@
 	<body>
 		<table class="table table-hover">
 	  		<tr>
-	    		<th>ID utilisateur</th>
-	    		<th>e-mail utilisateur</th>
-	    		<th>Pseudo utilisateur</th>
-	    		<th>Adresse utilisateur</th>
+	    		<th>ID</th>
+	    		<th>e-mail</th>
+	    		<th>Pseudo</th>
+	    		<th>Adresse</th>
+	    		<th>Type</th>
+	    		<th>Supprimer</th>
 	  		</tr>
 <?php 	  					
 	$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error()); 					
 	  					
-	$sqlRequestForUserGestion = 'select user_id, user_mail, user_pseudo, user_adresse from user';
+	$sqlRequestForUserGestion = 'select user_id, user_mail, user_pseudo, user_adresse, user_type from user';
 	$req = mysqli_query($db, $sqlRequestForUserGestion) or die('Erreur SQL !<br>'.$sqlRequestForUserGestion.'<br>'.mysql_error());
 	while ($dataResultRequete = mysqli_fetch_assoc($req)){ 					 						
 		echo ("<tr>
@@ -35,12 +37,23 @@
 				<td>".$dataResultRequete['user_mail']."</td>
 				<td>".$dataResultRequete['user_pseudo']."</td>
 				<td>".$dataResultRequete['user_adresse']."</td>
+				<td>".$dataResultRequete['user_type']."</td>
+				");
+	
+					if ($dataResultRequete['user_type']=='utilisateur')
+		  				echo ("
+		  					<td>
+		  						<div class='lineForm'>
+		  							<a href='supprimerUtilisateur.php?std=".$dataResultRequete['user_id']."'>
+		  								<input type='submit' class='btn' id='boutonSupprimerUtilisateur' name='Supprimer' value='Supprimer'>
+		  							</a>
+		  						</div>
+  						</td>
 		  	</tr>");
 	}
 ?>
 	  				
 	  		</table>	
 		</body>	
-	</html>	
-<?php }
-?>
+	</html>
+<?php }?>	
