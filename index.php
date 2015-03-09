@@ -48,7 +48,7 @@
 	</body>
 
 	<footer>
-		<a id="mentions" href="http://google.fr">mentions légales</a>
+		<a id="mentions" href="contact.html">Nous contacter</a>
 		<a id="plan" href="http://google.fr">plan du site</a>
 	</footer>
 </html>
