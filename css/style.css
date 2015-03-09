@@ -156,6 +156,17 @@ h4
 	right:140px
 }
 
+.codeBarreId
+{
+	display: none;
+}
+
+.codeBarreSupprime
+{
+	color: green;
+	margin-left: 55px;
+	display: none;
+}
 /**********************************codebarre.php************************************/
 
 .formulaireAjoutCodeBarre
