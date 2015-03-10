@@ -1,10 +1,11 @@
 $( document ).ready(function() {
-	$( "#bboutonValideEnvoyer" ).click(function() { 
+	console.log('haahah');
+	$( "#boutonValideEnvoyer" ).click(function() { 
 		var email=$("#email").val();
 		var nom=$("#nom").val();
 		var commentaire=$("#commentaire").val();
 		
-		if(checkinput(email, nom, commentaire, )){
+		if(checkinput(email, nom, commentaire)){
 			$("#erreurInscription").hide('Shake');	
 		$.ajax({
 		       url : 'envoiContact.php',
@@ -20,11 +21,12 @@ $( document ).ready(function() {
 		    });
 		}
 		else{
-			$("#erreurEnvoi").show('Shake');
+			$("#erreurInscription").show('Shake');
 			
 		}
 	});
 });
+
 
 function checkinput(email, nom, commentaire){
 	$(".form-control").css({
@@ -57,4 +59,3 @@ function checkinput(email, nom, commentaire){
 	}
 	return result;
 }
-});
