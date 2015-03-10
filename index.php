@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <?php
+	require('infobase.php');
 	session_start();
 	if (isset($_SESSION['pseudoConnexion'])){
 		header('location: session.php');

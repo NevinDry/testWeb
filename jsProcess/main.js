@@ -1,4 +1,4 @@
-$( document ).ready(function() {						// lancer la page js lorsqu'elle est prête 
+$( document ).ready(function() {	// lancer la page js lorsqu'elle est prête 
 	$( "#boutonValideInscription" ).click(function() { 	//la fonction s'éxécute lorsque l'on clique sur #boutonValideEnvoyer qui est ciblé par son "id" ou par sa "class"
 		var email=$("#email").val();					//définition des variable
 		var pseudo=$("#pseudo").val();

@@ -1,4 +1,5 @@
 <?php
+require('infobase.php');
 // récupération de la variable de session, si celle-ci existe: ouverture de la session, si celle-ci n'existe pas (==null): redirection vers index.html
 if(!isset($_SESSION)){
 	session_start();
@@ -64,8 +65,8 @@ if ($_SESSION['pseudoConnexion']==null){
 	<?php
 	
 	// connexion à la base, requête SQL
-	
-	$db = mysqli_connect('localhost', 'root', '', "testweb") or die('Erreur de connexion '.mysql_error());
+	require('infobase.php');
+	//$db = mysqli_connect('localhost', 'root', '', "testweb") or die('Erreur de connexion '.mysql_error());
 	$sqlRequestInfoCodeBarre = "select codebarre_id, codebarre_nom, codebarre_ref, codebarre_description, codebarre_image, codebarre_image_produit, codebarre_type from codebarre where codebarre_user_id='".$_SESSION['user_id']."'";
 	$req = mysqli_query($db, $sqlRequestInfoCodeBarre) or die('Erreur SQL !<br>'.$sqlRequestInfoCodeBarre.'<br>'.mysql_error());
 	

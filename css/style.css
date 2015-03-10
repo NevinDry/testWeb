@@ -244,7 +244,7 @@ h4
 
 #boutonSupprimerUtilisateur
 {
-	position:fixed;
+	float: left;
 }
 
 /**************************************************Contact**********************************************/

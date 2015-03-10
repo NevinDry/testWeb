@@ -1,8 +1,8 @@
 <?php
 
 // connexion à la base de données
-
-$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
+require('infobase.php');
+//$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
 
 // récupération des données du formulaire de connexion --> index.php avec la "method POST"
 

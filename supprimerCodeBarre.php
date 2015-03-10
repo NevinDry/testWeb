@@ -1,5 +1,6 @@
 <?php
-$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
+require('infobase.php');
+//$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
 
 if(isset($_GET["str"]))
 {

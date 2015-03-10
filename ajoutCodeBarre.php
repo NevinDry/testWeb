@@ -1,7 +1,7 @@
 <?php
 // connexion à la base
-
-$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
+require('infobase.php');
+//$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
 session_start();
 
 // récupération des données du formulaire de codebarre.php avec la "method POST"

@@ -28,8 +28,9 @@
 	    		<th>Type</th>
 	    		<th>Supprimer</th>
 	  		</tr>
-<?php 	  					
-	$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error()); 					
+<?php 	
+	require('../infobase.php');
+	//$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error()); 					
 	  					
 	$sqlRequestForUserGestion = 'select user_id, user_mail, user_pseudo, user_adresse, user_type from user';
 	$req = mysqli_query($db, $sqlRequestForUserGestion) or die('Erreur SQL !<br>'.$sqlRequestForUserGestion.'<br>'.mysql_error());

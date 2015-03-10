@@ -1,6 +1,7 @@
  <?php
  // connexion é la base
- $db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
+ require('infobase.php');
+ //$db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
  //  mysqli_real_escape_string = empêcher les injections SQL   
 	$adressemail=mysqli_real_escape_string($db,$_POST['email']);
 	$pseudo=mysqli_real_escape_string($db,$_POST['pseudo']);

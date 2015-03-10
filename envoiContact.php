@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-
+require('infobase.php');
 // Récupération des données "method POST" par variable ajax depuis le formulaire de contact
 
 	$email=$_POST['email'];
