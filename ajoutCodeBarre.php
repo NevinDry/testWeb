@@ -1,7 +1,10 @@
 <?php
-// connexion � la base
+// connexion à la base
+
 $db = mysqli_connect('localhost', 'root', '', "testweb")  or die('Erreur de connexion '.mysql_error());
 session_start();
+
+// récupération des données du formulaire de codebarre.php avec la "method POST"
 
 if(isset($_POST['nom'])){
 	$nom=mysqli_real_escape_string($db,$_POST['nom']);
@@ -61,11 +64,14 @@ else{
 	// on écrit la requéte sql
 	$sql = 'INSERT INTO codebarre(codebarre_nom, codebarre_ref, codebarre_description, codebarre_image, codebarre_image_produit, codebarre_type, codebarre_user_id) VALUES("'.$nom.'","'.$reference.'","'.$description.'","'.$imageCodeBarre.'","'.$imageProduit.'","'.$type.'","'.$_SESSION['user_id'].'")';
 	
-	// on insére les informations du formulaire dans la table
+	// on éxécute la requête
 	$db->query($sql) or die('Erreur SQL !'.$sql.'<br>'.mysql_error());
 	
 	// on affiche le résultat pour le visiteur
 	header('Content-Type: text/html; charset=utf-8');
+	
+	// on appelle les fonctions écrites plus bas
+	
 	uploadImageCodeBarre();
 	uploadImageProduit();
 	echo 'Vos infos ont été ajoutées.';
@@ -79,9 +85,12 @@ else{
 
 
 
-
+// fonctions:
 
 function uploadImageCodeBarre(){
+	
+	//emplacement de l'image:
+	
 	$target_dir = "images/imageCodeBarre/";
 	$target_file = $target_dir . basename($_FILES["imageCodeBarre"]["name"]);
 	$uploadOk = 1;

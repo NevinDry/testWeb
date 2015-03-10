@@ -1,16 +1,16 @@
-$( document ).ready(function() {
-	$( "#boutonValideInscription" ).click(function() { 
-		var email=$("#email").val();
+$( document ).ready(function() {						// lancer la page js lorsqu'elle est prête 
+	$( "#boutonValideInscription" ).click(function() { 	//la fonction s'éxécute lorsque l'on clique sur #boutonValideEnvoyer qui est ciblé par son "id" ou par sa "class"
+		var email=$("#email").val();					//définition des variable
 		var pseudo=$("#pseudo").val();
 		var adresse=$("#adresse").val();
 		var password=$("#password").val();
 		var password2=$("#password2").val();
 
-		if(checkinput(email, pseudo, adresse, password, password2)){
+		if(checkinput(email, pseudo, adresse, password, password2)){	//lancement de la fonction "checkinput" en bas de la page
 			$("#erreurInscription").hide('Shake');	
 		$.ajax({
 		       url : 'inscription.php',
-		       type : 'POST', // Le type de la requête HTTP, ici devenu POST
+		       type : 'POST', 							// Le type de la requête HTTP, ici devenu POST
 		       data : 'email=' + email + '&pseudo=' + pseudo + '&adresse=' + adresse + '&password=' + password, // On fait passer nos variables, exactement comme en GET, au script more_com.php
 		       dataType : 'html',
 		    	   success : function(code_html, statut){ // success est toujours en place, bien sûr !
@@ -32,14 +32,14 @@ function checkinput(email, pseudo, adresse, password, password2){
 	$(".form-control").css({
 		'border-color' : '#CCC'
 	});
-	var result = true;
-	if (email=="") {
+	var result = true;			// le résultat de base est "vrai"
+	if (email=="") {			// si un champ est vide (=="") on modifie le code css puis on ajoute un effet jquery (shake)
 		console.log ('email vide!');
 		$("#email").css({
             'border-color' : 'red'
 		});
 		$("#emailForm").effect("shake",{times:5},500);
-		result = false;
+		result = false;			// si le champ est vide le résultat devient "faux" mais la fonction continue de s'éxécuter
 	} 
 	if (pseudo=="") {
 		console.log ('pseudo vide!');
@@ -71,7 +71,7 @@ function checkinput(email, pseudo, adresse, password, password2){
             'border-color' : 'red'
 		});
 		$("#password2Form").effect("shake",{times:5},500);
-		result = false;
+		result = false;			// on renvoi le résultat
 	}
 	return result;
 }

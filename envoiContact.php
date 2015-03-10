@@ -1,12 +1,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+
+// Récupération des données "method POST" par variable ajax depuis le formulaire de contact
+
 	$email=$_POST['email'];
 	$nom=$_POST['nom'];
 	$commentaire=$_POST['commentaire'];
-
-	echo ($email);
-	echo ($nom);
-	echo ($commentaire);
 
 $mail = 'l.grolleau@jbrel.fr'; // Déclaration de l'adresse de destination.
 if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui rencontrent des bogues.

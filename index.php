@@ -22,6 +22,9 @@
 	</head>
 
 	<body>
+	
+<!-- Formulaire avec utilisation ajax -->	
+	
 		<div id="formulaire">
 			<div id="inscription">
 					<h3>Inscription</h3>
@@ -32,6 +35,8 @@
 					<div class="lineForm" id="password2Form"><label>Confirmer:</label> <input class="form-control" type="password" id="password2" name="password2"></div>
 					<div class="lineForm"><input type="submit" class="btn" id="boutonValideInscription" name="valider" value="valider"></div>
 			</div>
+		
+<!-- Formulaire avec php seulement -->		
 		
 			<div id="connexion">
 				<form method="post" action="connexion.php">

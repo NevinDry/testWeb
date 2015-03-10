@@ -1,5 +1,5 @@
 <?php
-//*//
+// récupération de la variable de session, si celle-ci existe: ouverture de la session, si celle-ci n'existe pas (==null): redirection vers index.html
 if(!isset($_SESSION)){
 	session_start();
 }
@@ -20,6 +20,7 @@ if ($_SESSION['pseudoConnexion']==null){
 		<h1 class="texte">Espace membre</h1>
 	</head>
 	<body>
+	<!-- affichage des information à partir de la variable $_SESSION qui est une variable globale (fonctionne sur toutes les pages -->
 		<div id="vosInformations">
 			<h4 class="texte">Vos informations:</h4>
 			<div class="texte" id="informationSession">
@@ -61,9 +62,14 @@ if ($_SESSION['pseudoConnexion']==null){
 		<th>Afficher les détails</th>
 	</tr>
 	<?php
+	
+	// connexion à la base, requête SQL
+	
 	$db = mysqli_connect('localhost', 'root', '', "testweb") or die('Erreur de connexion '.mysql_error());
 	$sqlRequestInfoCodeBarre = "select codebarre_id, codebarre_nom, codebarre_ref, codebarre_description, codebarre_image, codebarre_image_produit, codebarre_type from codebarre where codebarre_user_id='".$_SESSION['user_id']."'";
 	$req = mysqli_query($db, $sqlRequestInfoCodeBarre) or die('Erreur SQL !<br>'.$sqlRequestInfoCodeBarre.'<br>'.mysql_error());
+	
+	// while  : création d'une boucle a partir des données reçues de la db (5 lignes en db = 5 tour de boucle)
 	
 	while ($dataResultRequete = mysqli_fetch_assoc($req)){
 		echo ("<tr>
@@ -87,6 +93,8 @@ if ($_SESSION['pseudoConnexion']==null){
 		</td>
 		</tr>");
 	}
+	// echo pour écrire du html dans une page php, le while (boucle) s'applique au echo donc au html
+	
 	?>
 	</table>
 	<div class="codeBarreSupprime">Code barre supprimé</div>

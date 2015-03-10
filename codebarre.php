@@ -11,6 +11,9 @@
 	</head>
 	
 	<body>
+	
+	<!-- création d'un formulaire avec la "method POST" -->
+	
 		<form method="post" class="formulaireAjoutCodeBarre" action="ajoutCodeBarre.php" enctype="multipart/form-data">
 			<div class="lineForm"><label>Nom:</label> <input class="form-control" type="text" id="nom" name="nom"></div>
 			</br>
@@ -22,6 +25,9 @@
 			<textarea id="description" class="form-control" name="description" ></textarea>
 			</div>
 			</br>
+			
+			<!-- type file = uploader une image, un fichier depuis son ordinateur -->
+			
 			<div><label class="parcourir">Image du code barre:</label> <input type="file" accept="image/*" name="imageCodeBarre" class="parcourir"></div>
 			</br>
 			<div><label class="parcourir">Image du produit:</label> <input type="file" accept="image/*" name="imageProduit" class="parcourir"></div>

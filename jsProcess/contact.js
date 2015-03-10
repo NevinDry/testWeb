@@ -1,16 +1,15 @@
-$( document ).ready(function() {
-	console.log('haahah');
-	$( "#boutonValideEnvoyer" ).click(function() { 
-		var email=$("#email").val();
+$( document ).ready(function() { 					// lancer la page js lorsqu'elle est prête 
+	$( "#boutonValideEnvoyer" ).click(function() { 	//la fonction s'éxécute lorsque l'on clique sur #boutonValideEnvoyer qui est ciblé par son "id" ou par sa "class"
+		var email=$("#email").val();				//définition des variable		
 		var nom=$("#nom").val();
 		var commentaire=$("#commentaire").val();
 		
-		if(checkinput(email, nom, commentaire)){
+		if(checkinput(email, nom, commentaire)){	//lancement de la fonction "checkinput" en bas de la page
 			$("#erreurInscription").hide('Shake');	
 		$.ajax({
 		       url : 'envoiContact.php',
-		       type : 'POST', // Le type de la requête HTTP, ici devenu POST
-		       data : 'email=' + email + '&nom=' + nom + '&commentaire=' + commentaire, // On fait passer nos variables, exactement comme en GET, au script more_com.php
+		       type : 'POST', 						// Le type de la requête HTTP, ici devenu POST
+		       data : 'email=' + email + '&nom=' + nom + '&commentaire=' + commentaire, // On fait passer nos variables au script envoiContact.php
 		       dataType : 'html',
 		    	   success : function(code_html, statut){ // success est toujours en place, bien sûr !
 		    		   $("#envoiReussi").show('Shake');
@@ -32,14 +31,14 @@ function checkinput(email, nom, commentaire){
 	$(".form-control").css({
 		'border-color' : '#CCC'
 	});
-	var result = true;
-	if (email=="") {
+	var result = true;		// le résultat de base est "vrai"
+	if (email=="") {		// si un champ est vide (=="") on modifie le code css puis on ajoute un effet jquery (shake)
 		console.log ('email vide!');
 		$("#email").css({
             'border-color' : 'red'
 		});
 		$("#emailForm").effect("shake",{times:5},500);
-		result = false;
+		result = false;		// si le champ est vide le résultat devient "faux" mais la fonction continue de s'éxécuter
 	} 
 	if (nom=="") {
 		console.log ('nom vide!');
@@ -57,5 +56,5 @@ function checkinput(email, nom, commentaire){
 		$("#commentaireForm").effect("shake",{times:5},500);
 		result = false;
 	}
-	return result;
+	return result;			// on renvoi le résultat
 }
