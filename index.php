@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link rel="stylesheet" href="css/bootstrap-theme.css"/>
 		<title>Louis-stage</title>
-		<h1 id="titre">Site web test</h1>
+		<h1 id="titre">Gestion codes barres</h1>
 	</head>
 
 	<body>
