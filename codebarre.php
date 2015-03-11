@@ -4,7 +4,7 @@
 		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link rel="stylesheet" href="css/bootstrap-theme.css"/>
 		<h1>Ajout de code barre</h1>
@@ -28,11 +28,8 @@
 			
 			<!-- type file = uploader une image, un fichier depuis son ordinateur -->
 			
-			<div><label class="parcourir">Image du code barre:</label> <input type="file" accept="image/*" name="imageCodeBarre" class="parcourir"></div>
-			</br>
-			<div><label class="parcourir">Image du produit:</label> <input type="file" accept="image/*" name="imageProduit" class="parcourir"></div>
-			</br>
-			<div class="lineForm"><input type="submit" class="btn" id="boutonAjouterCodeBarre" name="valider" value="Ajouter"></div>
+			<label class="labelImageProduit">Image du code barre:</label> <input type="file" accept="image/*" name="imageCodeBarre"></br>
+			<label class="labelImageProduit">Image du produit:</label> <input type="file" accept="image/*" name="imageProduit">
 			</br>
 			<div id="selectionTypeCodeBarre">
 			<label for="typeCodeBarre">Type de code barre:</label>
@@ -40,7 +37,8 @@
 				<option value="1D">1D</option>
 				<option value="2D">2D</option>
 			</select>
-			</div>		
+			</div>	
+			<div class="lineForm"><input type="submit" class="btn" id="boutonAjouterCodeBarre" name="valider" value="Ajouter"></div>	
 		</form>	
 	</body>
 </html>

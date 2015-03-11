@@ -18,8 +18,8 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link rel="stylesheet" href="css/bootstrap-theme.css"/>
-		<title>Bonjour</title>
-		<h1 id="titre">Bonjour</h1>
+		<title>Louis-stage</title>
+		<h1 id="titre">Site web test</h1>
 	</head>
 
 	<body>

@@ -23,21 +23,21 @@ input{
 
 #formulaire{
 	text-align: center;
+	width: 55%;
 	margin: auto;
-	width: 627px;
-	margin-top: 40px;
-	height: 325px;
+	padding-bottom: 38%
 } 
 
 #inscription{
 	float: left;
 	padding-right: 30px;
 	border-right: 2px solid;
+	width: 50%
 }
 
 #connexion{
-	float: left;
-	margin-left: 30px; 
+	float: right; 
+	width: 45%
 }
 
 #formulaire .form-control{
@@ -114,14 +114,23 @@ h1
 
 h4
 {
-	margin-left:60px;
 	padding-top:30px;
+}
+
+#vosInformations
+{
+	width: 20%;
 }
 
 #informationSession
 {
-	margin-left:30px;
 	padding-top: 20px;
+	word-wrap: break-word;
+}
+
+#bodySession
+{
+	
 }
 
 #boutonDeconnexion
@@ -141,6 +150,7 @@ h4
 {
 	float:right;
 	margin-top:-227px;
+	width: 80%;
 }
 
 .imageTableau
@@ -161,6 +171,11 @@ h4
 	display: none;
 }
 
+#boutonDetailCodeBarre
+{
+	float: left;
+}
+
 .codeBarreSupprime
 {
 	color: green;
@@ -175,10 +190,14 @@ h4
 	margin-left:40px;
 }
 
-.parcourir
+#imageProduit
 {
-	width:50%;
-	margin-top:50px;
+	margin-top: 15px;
+}
+
+.labelImageProduit
+{
+	margin-bottom: 0px;
 }
 
 #description
